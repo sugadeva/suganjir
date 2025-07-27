@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/api/login", "dest": "/api/login.js" },
+    { "src": "/api/clear-users", "dest": "/api/clear-users.js" },
+    { "src": "/api/clear-servers", "dest": "/api/clear-servers.js" },
+    { "src": "/(.*)", "dest": "/public/index.html" }
+  ]
+}
